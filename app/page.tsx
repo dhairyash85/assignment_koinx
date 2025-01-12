@@ -1,101 +1,120 @@
 import Image from "next/image";
+import Navbar from "./component/Navbar";
+import { IoTriangleSharp } from "react-icons/io5";
+import Chart from "./component/Chart";
+
+const fundamentalsData = [
+  { label: "Bitcoin Price", value: "$16,814.50" },
+  { label: "24h Low/24h High", value: "$16,382.6/$16,874.50" },
+  { label: "7d Low/7d High", value: "$16,382.6/$16,874.50" },
+  { label: "Trading Volume", value: "$32,242,202,784" },
+  { label: "Market Cap Rank", value: "#1" },
+  { label: "Market Cap", value: "$323,542,202,784" },
+  { label: "Market Cap Dominance", value: "38.343%" },
+  { label: "Volume / Market Cap", value: "0.0718" },
+  {
+    label: "All-Time High",
+    value: "$69,044.96",
+    percentage: "-74.3%",
+    date: "Nov 10, 2021 (About a year ago)",
+  },
+  {
+    label: "All-Time Low",
+    value: "$67.81",
+    percentage: "24729.1%",
+    date: "Jul 06, 2013 (Over 9 years ago)",
+  },
+];
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+    <div className="bg-[#EFF2F5] h-full w-screen">
+      <Navbar />
+      <div className="p-5 flex flex-col">
+        <h1 className="font-thin text-gray-400 text-sm">
+          Cryptocurrencies {">>"}{" "}
+          <span className="font-bold text-black">Bitcoin</span>
+        </h1>
+        <div className="bg-white mt-3 rounded-lg p-4">
+          <div className="flex gap-2 items-center mb-5">
+            <img
+              className="h-8 w-8"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaSEEUJQPS_ARZeaL2PTiA5K0qDjwFzMoVQA&s"
+              alt="Bitcoin"
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+            <h1 className="font-semibold">Bitcoin</h1>
+            <p className="text-sm font-thin -translate-y-2">BTC</p>
+            <div className="bg-[#808A9D] ml-4 text-white p-2 font-semibold rounded-lg">
+              Rank #1
+            </div>
+          </div>
+          <div className="flex gap-3">
+            <h1 className="text-2xl font-semibold text-black mr-4">
+              $46,953.04
+            </h1>
+            <div className="bg-[#EBF9F4] flex items-center rounded-md px-2 py-1 gap-2">
+              <IoTriangleSharp className="h-3 w-3 text-[#14B079]" />
+              <p className="text-[#14B079] font-bold">2.51%</p>
+            </div>
+            <p className="text-sm font-semibold text-gray-500">(24H)</p>
+          </div>
+          <p className="text-black font-semibold text-lg">₹13,42,343</p>
+          <Chart />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        <div className="flex justify-between pt-7 mb-4 text-xs border-b-2 border-spacing-2">
+          <p className="text-blue-500 font-bold underline">Overview</p>
+          <p className="text-gray-500 font-semibold">Fundamentals</p>
+          <p className="text-gray-500 font-semibold">News Insights</p>
+          <p className="text-gray-500 font-semibold">Sentiments</p>
+          <p className="text-gray-500 font-semibold">Team</p>
+          <p className="text-gray-500 font-semibold">Technicals</p>
+          <p className="text-gray-500 font-semibold">Tokenomics</p>
+        </div>
+        <div className="bg-white rounded-lg py-2 px-3 mb-10">
+          <h1 className="font-semibold text-lg">
+            Fundamentals{" "}
+            <span className="bg-gray-400 rounded-full text-xs py-0.5 px-2 text-white">
+              i
+            </span>
+          </h1>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-y-3 mt-3 gap-x-10 grid-flow-row pb-12">
+            {fundamentalsData.map((item, index) => (
+              <div
+                key={index}
+                className="border-b pb-3 border-b-gray-400 text-gray-400 flex justify-between items-center"
+              >
+                <p>{item.label}</p>
+                <div className="flex flex-col gap-1 justify-center items-center">
+                  <p className="text-black">{item.value}</p>
+                  {item.percentage && (
+                    <p
+                      className={`text-${
+                        item.percentage[0] === "-" ? "red" : "green"
+                      }-500`}
+                    >
+                      {item.percentage}
+                    </p>
+                  )}
+                  {item.date && <p className="text-xs">{item.date}</p>}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="bg-white py-2 px-4 rounded-lg">
+          <h1 className="font-semibold text-lg py-4">Sentiment</h1>
+          <p className="font-semibold text-gray-400 py-2">
+            Key Events{" "}
+            <span className="bg-gray-600 rounded-full text-xs py-0.5 px-2 text-white">
+              i
+            </span>
+          </p>
+          <div className="rounded-lg bg-[#E8F4FD] p-3">
+            <p className="">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p className="text-sm text-gray-500 ">do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
