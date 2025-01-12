@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Navbar from "./component/Navbar";
 import { IoTriangleSharp } from "react-icons/io5";
 import Chart from "./component/Chart";
@@ -101,7 +100,7 @@ export default function Home() {
             ))}
           </div>
         </div>
-        <div className="bg-white py-2 px-4 rounded-lg">
+        <div className="bg-white py-2 px-4 rounded-lg mb-10">
           <h1 className="font-semibold text-lg py-4">Sentiment</h1>
           <p className="font-semibold text-gray-400 py-2">
             Key Events{" "}
@@ -109,10 +108,52 @@ export default function Home() {
               i
             </span>
           </p>
-          <div className="rounded-lg bg-[#E8F4FD] p-3">
-            <p className="">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <p className="text-sm text-gray-500 ">do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <div className="flex justify-center flex-wrap gap-2">
+            <div className="rounded-lg bg-[#E8F4FD] p-3 flex gap-4 flex-1">
+              <div className="h-max w-max min-w-max">
+                <img className="w-max min-w-max" src="/newsletter.png"></img>
+              </div>
+              <div>
+                <p className="">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+                <p className="text-sm text-gray-500 ">
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                  irure dolor in reprehenderit in voluptate velit esse cillum
+                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                  cupidatat non proident, sunt in culpa qui officia deserunt
+                  mollit anim id est laborum.
+                </p>
+              </div>
+            </div>
+            <div className="rounded-lg bg-[#EBF9F4] p-3 flex gap-4 flex-1">
+              <div className="h-max w-max min-w-max">
+                <img className="w-max min-w-max" src="/upArrow.png"></img>
+              </div>
+              <div>
+                <p className="">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+                <p className="text-sm text-gray-500 ">
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                  irure dolor in reprehenderit in voluptate velit esse cillum
+                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                  cupidatat non proident, sunt in culpa qui officia deserunt
+                  mollit anim id est laborum.
+                </p>
+              </div>
+            </div>
           </div>
+        </div>
+        <div className="bg-white py-2 px-4 rounded-lg mb-10">
+          <h1 className="font-semibold text-lg py-4">About Bitcoin</h1>
+          <p className="text-black font-bold">What is Bitcoin?</p>
+          <p className="text-black ">Bitcoin’s price today is US$16,951.82, with a 24-hour trading volume of $19.14 B. BTC is +0.36% in the last 24 hours. It is currently -7.70% from its 7-day all-time high of $18,366.66, and 3.40% from its 7-day all-time low of $16,394.75. BTC has a circulating supply of 19.24 M BTC and a max supply of 21 M BTC.</p>
+          
         </div>
       </div>
     </div>
